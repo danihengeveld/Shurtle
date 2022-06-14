@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function middleware(req, ev){
-    if(req.nextUrl.pathname.startsWith("/api")) {
+    if(req.nextUrl.pathname.startsWith("/api/")) {
         return;
     }
 
@@ -9,10 +9,10 @@ export async function middleware(req, ev){
 
     const data = await fetch(`${req.nextUrl.origin}/api/get-url/${slug}`);
     if(data.ok){
-        const json = await (data).json();
+        const json = await data.json();
 
         if(json?.url){
-            return NextResponse.redirect(data.url);
+            return NextResponse.redirect(json.url);
         }
     }
 }
