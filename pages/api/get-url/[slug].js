@@ -7,9 +7,8 @@ export default async function handler(req, res) {
 
     const slug = req.query["slug"];
     if (!slug || typeof slug !== "string") {
-        res.statusCode = 404;
         res.setHeader("Cache-Control", "s-maxage=31557600, stale-while-revalidate");
-        res.send(JSON.stringify({ message: "Please enter a slug" }));
+        res.status(400).send({ message: "Please enter a slug" });
 
         return;
     }
@@ -23,10 +22,8 @@ export default async function handler(req, res) {
     });
 
     if (!data) {
-        res.statusCode = 404;
-
         res.setHeader("Cache-Control", "s-maxage=86400, stale-while-revalidate");
-        res.send(JSON.stringify({ message: "Slug not found" }));
+        res.status(404).send({ message: "Slug not found" });
 
         return;
     }
