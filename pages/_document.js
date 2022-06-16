@@ -5,7 +5,10 @@ import theme from "../theme";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
+      <Head>
+        <title>Shurtle</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <body>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Main />

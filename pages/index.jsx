@@ -29,7 +29,7 @@ export default function Home() {
     >
       <VStack spacing="6">
         <Heading as="h1" size="4xl" fontWeight="semibold">
-          Shortle
+          Shurtle
         </Heading>
         <Divider />
         <Formik
