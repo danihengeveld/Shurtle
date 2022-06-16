@@ -28,7 +28,7 @@ export default async function handler(req, res) {
 
       if (existing) {
         res.status(409).send({
-          message: `Slug '${slug}' is already in use`,
+          message: `Slug '${slug}' is already in use!`,
           current: existing,
         });
         return;
