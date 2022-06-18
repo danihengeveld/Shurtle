@@ -79,9 +79,9 @@ export default function Home() {
                     <FormControl
                       isInvalid={form.errors.slug && form.touched.slug}
                     >
-                      <FormLabel htmlFor="slug">Shortle Slug</FormLabel>
+                      <FormLabel htmlFor="slug">Shurtle Link</FormLabel>
                       <InputGroup>
-                        <InputLeftAddon>shortle.app/</InputLeftAddon>
+                        <InputLeftAddon>shurtle.app/</InputLeftAddon>
                         <Input
                           {...field}
                           id="slug"
@@ -101,7 +101,7 @@ export default function Home() {
                   isLoading={props.isSubmitting}
                   type="submit"
                 >
-                  Shortle it!
+                  Shurtle it!
                 </Button>
               </VStack>
             </Form>
