@@ -90,7 +90,7 @@ export default function Home() {
                         />
                       </InputGroup>
                       <FormHelperText>
-                        The Shortle URL to shorten to.
+                        The Shurtle URL to shorten to.
                       </FormHelperText>
                       <FormErrorMessage>{form.errors.slug}</FormErrorMessage>
                     </FormControl>
@@ -140,8 +140,8 @@ async function handleSubmit(values, actions, toast) {
   }
 
   toast({
-    title: "Shortled!",
-    description: `Reachable at: shortle.app/${json.slug}`,
+    title: "Shurtled!",
+    description: `Reachable at: shurtle.app/${json.slug}`,
     status: "success",
     duration: 10000,
     position: "bottom",
