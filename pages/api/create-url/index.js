@@ -3,8 +3,6 @@ import prisma from "../../../lib/prisma";
 export default async function handler(req, res) {
   const { body, method } = req;
 
-  res.setHeader("Content-Type", "application/json");
-
   switch (method) {
     case "POST":
       const url = body["url"];
